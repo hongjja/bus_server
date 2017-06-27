@@ -17,7 +17,9 @@ router.get('/weekday', function(req, res, next) {
                 //a lean implementation of core jQuery designed specifically for the server
                 
                 var weekdayHTML = $("#tr_box12_1").html();
-                var weekday= weekdayHTML.split("------>")[2]; // table만
+
+                var weekday = weekdayHTML.split("------>")[1]; // 방학중
+                //var weekday = weekdayHTML.split("------>")[2]; // 학기중
 
                 var length = weekday.split("</tr>").length;
 
@@ -55,7 +57,9 @@ router.get('/weekend', function(req, res, next) {
                 // $ is Cheerio by default
                 //a lean implementation of core jQuery designed specifically for the server
                 var weekendHTML = $("#tr_box12_2").html();
-                var weekend= weekendHTML.split("------>")[2]; // table만
+
+                var weekend = weekendHTML.split("------>")[1]; // 방학중
+                //var weekend = weekendHTML.split("------>")[2]; // 학기중
 
                 var length = weekend.split("</tr>").length;
 
@@ -92,7 +96,7 @@ router.get('/heunghae', function(req, res, next) {
                 // $ is Cheerio by default
                 //a lean implementation of core jQuery designed specifically for the server
                 var heunghaeHTML = $("#tr_box12_3").html();
-                var heunghae = heunghaeHTML.split("------>")[3]; // table만 
+                var heunghae = heunghaeHTML.split("------>")[3];
 
                 var length = heunghae.split("</tr").length;
 
@@ -120,3 +124,5 @@ router.get('/heunghae', function(req, res, next) {
 
 
 module.exports = router;
+
+// 시간표 탭 부분 사용

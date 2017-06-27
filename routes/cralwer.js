@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
                 var $ = res1.$;
                 var weekday = $("#tr_box12_1").html();
                 var weekend = $("#tr_box12_2").html();
-                var heunghae = $("#tr_box12_3").html();
+                var heunghae = $("#tr_box12_3").html(); // X
 
 
 				if(Now.getDay() == 0 || Now.getDay() == 6 || (Now.getMonth() == 3 && Now.getDate() == 1) 
@@ -27,8 +27,8 @@ router.get('/', function(req, res, next) {
 				|| (Now.getMonth() == 12 && Now.getDate() == 25) ) 
 				// 0==일요일 6==토요일 // 삼일절, 광복절, 개천절, 한글날, 양력설날, 어린이날, 현충일, 크리스마스
 				{
-					//var weekend1 = weekend.split("----->")[1]; // 방학중
-					var weekend1 = weekend.split("----->")[2]; // 학기중
+					var weekend1 = weekend.split("----->")[1]; // 방학중
+					//var weekend1 = weekend.split("----->")[2]; // 학기중
 					//시간표에서 table만 뜯어옴
 
 					var weekend2 = weekend1.split("</tr>");
@@ -42,8 +42,8 @@ router.get('/', function(req, res, next) {
 				} // 휴일 시간표 나오는 날
 				else
 				{
-					//var weekday1 = weekday.split("----->")[1]; // 방학중
-					var weekday1 = weekday.split("----->")[2]; // 학기중
+					var weekday1 = weekday.split("----->")[1]; // 방학중
+					//var weekday1 = weekday.split("----->")[2]; // 학기중
 					//시간표에서 table만 뜯어옴
 
 					var weekday2 = weekday1.split("</tr>");
@@ -68,3 +68,4 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 
+// 메인화면 맨 아랫부분
