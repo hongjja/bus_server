@@ -33,6 +33,7 @@ router.get('/weekday', function(req, res, next) {
 
                 res.send(returnV);
 
+
             }
             done();
         }
